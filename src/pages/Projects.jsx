@@ -5,7 +5,7 @@ const projects = [
     title: "Real-Time Chat Application",
     desc: "Developed a scalable real-time chat platform with JWT authentication and WebSocket integration using Socket.io. Implemented private messaging, live user presence tracking, and optimized message delivery for low latency communication.",
     tech: ["React", "JavaScript", "Tailwind", "Node.js", "Express.js", "MongoDB", "Socket.io"],
-    image: "/Chat-app.jpg",
+    image: "/quick-chat.jpg",
     live: "https://quickchat-realtime.vercel.app",
     code: "https://github.com/sudharsanganapathy/quickchat-fullstack"
   },
@@ -13,7 +13,7 @@ const projects = [
     title: "Student Management System",
     desc: "Built a full-stack management system with secure authentication and role-based access control. Implemented CRUD operations and optimized backend APIs for efficient data handling and scalability.",
     tech: ["React", "Node.js", "Express.js", "SQL", "Tailwind"],
-    image: "/Sms.jpg",
+    image: "/students.jpg",
     live: "https://sms-app.vercel.app",
     code: "https://github.com/sudharsanganapathy/VH-Q1-Spring-Application-Code"
   },

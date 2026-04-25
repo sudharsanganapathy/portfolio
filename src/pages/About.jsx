@@ -44,7 +44,7 @@ export default function About() {
 
     {/* Image */}
     <img
-      src="/1000057232.png"
+      src="/profile-pic.png"
       alt="profile"
       className="relative w-80 h-80 object-cover object-top rounded-2xl border border-white/10 
       transition duration-500 group-hover:scale-105 group-hover:rotate-1"
