@@ -1,3 +1,4 @@
+import resume from "../assets/sudharsan_resume.pdf";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -52,7 +53,7 @@ export default function Contact() {
               LinkedIn
             </a>
             <a
-              href="Sudharsan_G_Resume.pdf"
+              href={resume}
               target="_blank"
               className="px-4 py-2 border rounded-lg hover:bg-white hover:text-black transition"
             >

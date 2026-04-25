@@ -1,3 +1,4 @@
+import profileImg from "../assets/profile-pic.png";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -44,7 +45,7 @@ export default function About() {
 
     {/* Image */}
     <img
-      src="/profile-pic.png"
+      src={profileImg}
       alt="profile"
       className="relative w-80 h-80 object-cover object-top rounded-2xl border border-white/10 
       transition duration-500 group-hover:scale-105 group-hover:rotate-1"
