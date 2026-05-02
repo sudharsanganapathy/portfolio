@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     
-      <Toaster position="top-right" />
+      <Toaster position="top-center" />
 
       <Router>
         <div className="min-h-screen bg-black text-white">
