@@ -17,7 +17,7 @@ const projects = [
     desc: "Built a full-stack management system with secure authentication and role-based access control. Implemented CRUD operations and optimized backend APIs for efficient data handling and scalability.",
     tech: ["React", "Node.js", "Express.js", "SQL", "Tailwind"],
     image: studentImg,
-    live: "https://sms-app.vercel.app",
+    live: "https://project-mgt-ecru.vercel.app",
     code: "https://github.com/sudharsanganapathy/VH-Q1-Spring-Application-Code"
   },
   {

@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -7,22 +8,26 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-black text-white">
-        <Navbar />
+    <>
+    
+      <Toaster position="top-right" />
 
-        {/* wrapper */}
-        <div className="pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+      <Router>
+        <div className="min-h-screen bg-black text-white">
+          <Navbar />
+
+          <div className="pt-20">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+
         </div>
-
-      </div>
-    </Router>
+      </Router>
+    </>
   );
 }
 

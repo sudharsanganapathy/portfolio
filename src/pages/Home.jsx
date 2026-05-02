@@ -18,6 +18,26 @@ export default function Home() {
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
+  const text = [
+    "I'm",
+    "Sudharsan",
+    "—",
+    "a",
+    "Fullstack",
+    "Developer",
+    "focused",
+    "on",
+    "building",
+    "high-performance",
+    "applications",
+    "with",
+    "clean",
+    "architecture",
+    "and",
+    "real-world",
+    "impact."
+  ];
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden flex items-center justify-center px-6">
 
@@ -35,11 +55,11 @@ export default function Home() {
         }}
       />
 
-      {/* ✨ FLOATING GRADIENT ORBS */}
+      {/* ✨ FLOATING ORBS */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
       <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full animate-pulse"></div>
 
-      {/* 🔥 MAIN CONTENT */}
+      {/* 🔥 CONTENT */}
       <div className="relative z-10 text-center max-w-4xl">
 
         {/* TAG */}
@@ -66,23 +86,41 @@ export default function Home() {
           with precision & performance
         </motion.h1>
 
-        {/* SUBTEXT */}
-        <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto"
-        >
-          I'm Sudharsan — a Fullstack Developer focused on building
-          high-performance applications with clean architecture and real-world impact.
+        {/* ✨ WORD-BY-WORD TEXT */}
+        <motion.p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed flex flex-wrap justify-center gap-2">
+          {text.map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                delay: i * 0.05,
+                duration: 0.4,
+              }}
+              className={`
+                ${word === "Sudharsan" ? "text-white font-semibold" : ""}
+                ${
+                  word === "Fullstack" || word === "Developer"
+                    ? "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold"
+                    : ""
+                }
+                ${
+                  word.includes("high-performance") ||
+                  word.includes("architecture")
+                    ? "hover:text-white transition duration-300 cursor-pointer"
+                    : ""
+                }
+              `}
+            >
+              {word}
+            </motion.span>
+          ))}
         </motion.p>
 
-        {/* 🧲 MAGNETIC BUTTONS */}
+        {/* 🧲 BUTTONS */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-
           <MagneticButton to="/projects" label="View Work" primary />
           <MagneticButton to="/contact" label="Hire Me" />
-
         </div>
       </div>
 
@@ -94,7 +132,7 @@ export default function Home() {
   );
 }
 
-/* 🧲 MAGNETIC BUTTON COMPONENT */
+/* 🧲 MAGNETIC BUTTON */
 function MagneticButton({ to, label, primary }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
