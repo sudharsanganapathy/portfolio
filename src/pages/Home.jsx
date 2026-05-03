@@ -91,39 +91,40 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
-          I build{" "}
+          Designing{" "}
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">
-            scalable, reliable, performant
-          </span>{" "}
-          systems.
+            resilient, scalable systems
+          </span>
+          <br />
+          that deliver at scale.
         </motion.h1>
 
         {/* ✨ TEXT */}
-<motion.p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed flex flex-wrap justify-center gap-2">
-  {text.map((word, i) => (
-    <motion.span
-      key={i}
-      initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ delay: i * 0.05, duration: 0.4 }}
-      whileHover={{
-        scale: 1.12,
-        color: "#fff",
-        textShadow: "0px 0px 10px rgba(59,130,246,0.7)"
-      }}
-      className={`
-        ${word === "Sudharsan" ? "text-white font-bold" : ""}
-        ${
-          word === "Fullstack" || word === "Developer"
-            ? "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold"
-            : ""
-        }
-      `}
-    >
-      {word}
-    </motion.span>
-  ))}
-</motion.p>
+        <motion.p className="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed flex flex-wrap justify-center gap-2">
+          {text.map((word, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
+              whileHover={{
+                scale: 1.12,
+                color: "#fff",
+                textShadow: "0px 0px 10px rgba(59,130,246,0.7)"
+              }}
+              className={`
+                ${word === "Sudharsan" ? "text-white font-bold" : ""}
+                ${
+                  word === "Fullstack" || word === "Developer"
+                    ? "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold"
+                    : ""
+                }
+              `}
+            >
+              {word}
+            </motion.span>
+          ))}
+        </motion.p>
 
         {/* 🧲 BUTTONS */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
