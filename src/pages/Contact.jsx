@@ -1,4 +1,4 @@
-import resume from "../assets/sudharsan_resume.pdf";
+import resume from "../assets/sudharsan_resume_v2.pdf";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -102,7 +102,7 @@ export default function Contact() {
 </div>
 
           <div className="flex gap-4 mt-6">
-            <a href="https://github.com/" target="_blank"
+            <a href="https://github.com/sudharsanganapathy" target="_blank"
               className="px-4 py-2 border border-white/20 rounded-lg hover:bg-white hover:text-black transition">
               GitHub
             </a>
